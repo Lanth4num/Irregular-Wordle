@@ -10,14 +10,23 @@
 <body>
   <h1>Irregular Wordle</h1>
   <h2>Tu n'as que 5 essais, alors réfléchis bien :</h2>
-  <p class="legend" style="background-color:var(--correct-color);"><b>Lettre bien placée</b></p>
-  <p class="legend" style="background-color:var(--present-color);"><b>Lettre mal placée</b></p>
-  <p class="legend" style="background-color:var(--absent-color);"><b>Lettre absente</b></p>
+  <p class="legend" style="background-color:var(--correct-color);">
+    <b>Lettre bien placée</b>
+  </p>
+  <p class="legend" style="background-color:var(--present-color);">
+    <b>Lettre mal placée</b>
+  </p>
+  <p class="legend" style="background-color:var(--absent-color);">
+    <b>Lettre absente</b>
+  </p>
+
   <div id="score-box">Meilleur série : 0 | Série actuelle : 0</div>
+
   <!-- Conteneur de la grille -->
   <div id="board-container">
     <div id="board"></div>
   </div>
+
   <!-- Le clavier est maintenant directement sous la grille -->
   <div id="virtual-keyboard">
     <div class="keyboard-row" id="row1"></div>
@@ -27,7 +36,7 @@
   <!-- Message externe (actuellement vide) -->
   <div id="message"></div>
   <footer>
-    <p>Projet réalisé par F. Bertin, du collège Jean Moulin</p>
+    <p>Projet réalisé par F. Bertin, du collège Jean Moulin. <a href="https://github.com/LordBertin/Irregular-Wordle">Github</a></p>
     <img src="https://i.ibb.co/BVQNGxTM/logo-Wordle2.png" alt="logo-Wordle2" border="0" style="max-width: 200px;">
   </footer>
   <script src="main.js"></script>
