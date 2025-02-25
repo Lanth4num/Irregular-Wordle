@@ -1,0 +1,193 @@
+body {
+		font-family: sans-serif;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 10px;
+		background: url('https://wallpapers.com/images/hd/light-wood-background-v9gsvgo48dhdtn6x.jpg') no-repeat center center fixed;
+		background-size: cover;
+	}
+
+h1, h2 {
+	text-align: center;
+	margin: 10px;
+}
+
+.legend {
+	text-align: center;
+	margin: 3px;
+	padding: 3px;
+	font-weight: bold;
+}
+
+#score-box {
+	margin-bottom: 10px;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+/* Conteneur de la grille */
+#board-container {
+	position: relative;
+	width: 100%;
+	max-width: 500px;
+}
+
+#board {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.row {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+
+.cell {
+	flex: 1;
+	aspect-ratio: 1 / 1;
+	max-width: 40px;
+	border: 2px solid #ccc;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	font-weight: bold;
+	text-transform: lowercase;
+	background-color: white;
+	transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Animation flip */
+.flip {
+	animation: flip 0.6s;
+}
+@keyframes flip {
+	0% { transform: rotateX(0deg); }
+	50% { transform: rotateX(90deg); }
+	100% { transform: rotateX(0deg); }
+}
+
+.correct {
+	background-color: #6aaa64;
+	color: white;
+	border: none;
+}
+
+.present {
+	background-color: #c9b458;
+	color: white;
+	border: none;
+}
+
+.absent {
+	background-color: #787c7e;
+	color: white;
+	border: none;
+}
+
+/* On ne fait plus apparaître de message externe */
+#message {
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	min-height: 24px;
+	text-align: center;
+}
+
+/* Fenêtre modale dans #board-container */
+#verb-info {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 10;
+	background-color: rgba(255,255,255,0.95);
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
+	max-width: 90%;
+	text-align: left;
+	font-size: 16px;
+}
+
+/* Bouton dans la modale centré */
+#modal-button {
+	display: block;
+	margin: 15px auto 0 auto;
+	padding: 6px 12px;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+/* Clavier virtuel en disposition AZERTY */
+#virtual-keyboard {
+	width: 100%;
+	max-width: 500px;
+	background-color: rgba(255, 255, 255, 0.8);
+	padding: 10px;
+	border-radius: 8px;
+	margin-top: 10px; /* Position remontée */
+}
+
+.keyboard-row {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+	margin-bottom: 5px;
+}
+
+.key {
+	flex: 1;
+	padding: 10px 5px;
+	background-color: #ddd;
+	border: none;
+	border-radius: 4px;
+	font-size: 16px;
+	cursor: pointer;
+	user-select: none;
+	transition: background-color 0.2s, transform 0.1s;
+}
+
+.key:hover {
+	background-color: #ccc;
+}
+
+.key:active {
+	transform: scale(0.95);
+}
+
+@media (max-width: 600px) {
+	.cell {
+		max-width: 30px;
+		font-size: 18px;
+	}
+	#score-box, #message {
+		font-size: 14px;
+	}
+	.key {
+		padding: 8px 4px;
+		font-size: 14px;
+	}
+	#verb-info {
+		font-size: 14px;
+	}
+	#modal-button {
+		font-size: 14px;
+	}
+}
+
+footer {
+	text-align: center;
+	margin-top: 20px;
+}
+
+footer p {
+	margin: 0 0 5px;
+	font-size: 14px;
+}
