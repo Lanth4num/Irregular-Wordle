@@ -1,6 +1,11 @@
 /* Code mainly made by AI */
+
 // Base de données de conjugaison et traduction pour l'ensemble des verbes
-const verbData = {};
+let verbData;
+
+fetch("verbs.json")
+	.then((res)=> res.json())
+	.then((json) => verbData = json);
 
 // Liste des verbes du jeu
 const verbs = [
