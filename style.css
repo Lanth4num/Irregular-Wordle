@@ -1,13 +1,13 @@
 /* Code mainly made by AI */
 body {
-		font-family: sans-serif;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		margin: 10px;
-		background: url('https://wallpapers.com/images/hd/light-wood-background-v9gsvgo48dhdtn6x.jpg') no-repeat center center fixed;
-		background-size: cover;
-	}
+	font-family: sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px;
+	background: url('https://wallpapers.com/images/hd/light-wood-background-v9gsvgo48dhdtn6x.jpg') no-repeat center center fixed;
+	background-size: cover;
+}
 
 h1, h2 {
 	text-align: center;
