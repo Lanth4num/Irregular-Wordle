@@ -1,3 +1,4 @@
+/* Code mainly made by AI */
 // Base de données de conjugaison et traduction pour l'ensemble des verbes
 const verbData = {};
 
